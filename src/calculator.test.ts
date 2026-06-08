@@ -1,5 +1,5 @@
 import { describe, test, expect } from 'vitest';
-import { multiply, sum } from './calculator';
+import { divide, multiply, sum } from './calculator';
 import { subtract } from './calculator';
 
 describe('calculator', () => {
@@ -41,5 +41,19 @@ describe('calculator', () => {
 
         // Then
         expect(result).toBe(49);
+    });
+});
+
+describe('calculator', () => {
+    test('divide should return the result of dividation of two numbers', () => {
+        // Given
+        const number1 = 14;
+        const number2 = 2;
+
+        // When
+        const result = divide(number1, number2);
+
+        // Then
+        expect(result).toBe(7);
     });
 });
