@@ -1,5 +1,6 @@
 import { describe, test, expect } from 'vitest';
 import { sum } from './calculator';
+import { subtract } from './calculator';
 
 describe('calculator', () => {
     test('sum should return the result of adding two numbers', () => {
@@ -9,6 +10,20 @@ describe('calculator', () => {
 
         // When
         const result = sum(number1, number2);
+
+        // Then
+        expect(result).toBe(5);
+    });
+});
+
+describe('calculator', () => {
+    test('sum should return the result of substraction of two numbers', () => {
+        // Given
+        const number1 = 10;
+        const number2 = 5;
+
+        // When
+        const result = subtract(number1, number2);
 
         // Then
         expect(result).toBe(5);
